@@ -1,0 +1,53 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: 'gradle'
+
+      - name: Build
+        run: |
+          ./gradlew --no-daemon --stacktrace build
+
+      - name: Find release jars
+        id: findjars
+        shell: bash
+        run: |
+          shopt -s nullglob
+          files=(build/libs/*.jar)
+          # filter out sources/dev jars if present
+          filtered=()
+          for f in "${files[@]}"; do
+            case "$f" in
+              *-sources.jar|*-dev.jar) ;;
+              *) filtered+=("$f");;
+            esac
+          done
+          if [ ${#filtered[@]} -eq 0 ]; then
+            echo "No jars found" >&2
+            exit 1
+          fi
+          printf '%s\n' "${filtered[@]}" > jars.txt
+          echo "count=${#filtered[@]}" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            $(cat jars.txt)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
