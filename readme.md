@@ -18,10 +18,11 @@ All original credits and rights belong to the original Scatha‑Pro developers. 
 - GitHub (original): https://github.com/NamelessJu/Scatha-Pro
 - Discord (Scatha Farmers): https://discord.gg/scatha-farmers-898827889145942056
 
-Disclaimer
-- This repository is not affiliated with the original authors. It is a community-maintained, unofficial Fabric port.
-- If any of the original authors request changes or takedowns, they will be respected.
-- This mod is not intended for regular gameplay. It is a developer-focused project for porting the mod to Minecraft 1.21.5 and implementing features.
+<span style="color:red; font-weight:bold;">Disclaimer</span>  
+- This repository is not affiliated with the original authors. It is a community-maintained, unofficial Fabric port.  
+- If any of the original authors request changes or takedowns, they will be respected.  
+- This mod is not intended for regular gameplay. It is a developer-focused project for porting the mod to Minecraft 1.21.5 and implementing features.  
+
 
 
 Build locally
