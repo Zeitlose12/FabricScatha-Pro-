@@ -130,4 +130,22 @@
             "stream": true
         }]
     }
+,
+  "alerts.pet_drop_rare": { "category": "player", "sounds": [ { "name": "minecraft:entity.experience_orb.pickup" } ] },
+  "alerts.pet_drop_epic": { "category": "player", "sounds": [ { "name": "minecraft:entity.player.levelup" } ] },
+  "alerts.pet_drop_legendary": { "category": "player", "sounds": [ { "name": "minecraft:ui.toast.challenge_complete" } ] },
+
+  "alerts.worm_spawn": { "category": "player", "sounds": [ { "name": "minecraft:entity.silverfish.ambient" } ] },
+  "alerts.scatha_spawn": { "category": "player", "sounds": [ { "name": "minecraft:entity.ender_dragon.growl" } ] },
+  "alerts.goblin_spawn": { "category": "player", "sounds": [ { "name": "minecraft:entity.vindicator.ambient" } ] },
+  "alerts.jerry_spawn": { "category": "player", "sounds": [ { "name": "minecraft:entity.sheep.ambient" } ] },
+
+  "alerts.achievement": { "category": "player", "sounds": [ { "name": "minecraft:ui.toast.challenge_complete" } ] },
+  "alerts.milestone": { "category": "player", "sounds": [ { "name": "minecraft:ui.toast.task_complete" } ] },
+  "alerts.high_heat": { "category": "player", "sounds": [ { "name": "minecraft:block.fire.ambient" } ] },
+  "alerts.cooldown_ready": { "category": "player", "sounds": [ { "name": "minecraft:block.note_block.pling" } ] },
+
+  "alerts.notification": { "category": "player", "sounds": [ { "name": "minecraft:ui.button.click" } ] },
+  "alerts.warning": { "category": "player", "sounds": [ { "name": "minecraft:block.note_block.bass" } ] },
+  "alerts.error": { "category": "player", "sounds": [ { "name": "minecraft:block.anvil.land" } ] }
 }

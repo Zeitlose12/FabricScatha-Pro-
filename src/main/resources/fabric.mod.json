@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "scathapro",
+  "version": "1.0.0",
+  "name": "Scatha-Pro",
+  "description": "Scatha-Pro (Fabric-Port)",
+  "authors": ["NamelessJu"],
+  "license": "All Rights Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["namelessju.scathapro.fabric.ScathaProFabric"],
+    "client": ["namelessju.scathapro.fabric.ScathaProFabricClient"],
+    "modmenu": ["namelessju.scathapro.fabric.modmenu.ModMenuIntegration"]
+  },
+  "icon": "icon.png",
+  "mixins": [
+    "scathapro.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.17.2",
+    "minecraft": ">=1.21.5",
+    "fabric": ">=0.128.2+1.21.5"
+  }
+}

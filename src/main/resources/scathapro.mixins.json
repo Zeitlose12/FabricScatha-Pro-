@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "namelessju.scathapro.fabric.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "scathapro.refmap.json",
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
